@@ -6,7 +6,6 @@ from torch.utils.data import DataLoader
 import math
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-torch.manual_seed(42)
 
 # Hyperparameters --------------------------------------------
 
@@ -14,6 +13,7 @@ TRANING_CYCLES = 5
 BATCH_SIZE = 128
 NUMBER_OF_TRAINING_IMAGES = 20000 # This is a placeholder. Please enter the number of images in your dataset here
 MODEL_ADDRESS = "ModelDetectingNumber.pth"
+torch.manual_seed(42)
 
 # Load data --------------------------------------------------
 
@@ -119,4 +119,5 @@ def main():
     print(f"Model has been saved successfully as {MODEL_ADDRESS}")
 
 if __name__ == "__main__":
+
     main()
