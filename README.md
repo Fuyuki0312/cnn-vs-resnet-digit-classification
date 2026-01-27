@@ -21,7 +21,8 @@ Image classification using Convolutional Neural Network, demonstrating inference
 
 
 ## Inference
-- You may use: Kaggle Handwritten Number Digit dataset or any custom handwritten number image dataset.
+- You may use: Kaggle Handwritten Number Digit dataset or any custom handwritten number image.
+- Note: Input images are converted to grayscale and resized before inference.
 
 
 ## Others
