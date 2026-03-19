@@ -16,7 +16,7 @@ Numerical image classification using Convolutional Neural Network, illustrating 
 
 
 ## How to use this model
-- If you wish to continue to train the model which was already trained by me, you may consider to run the file train.py with file ModelDetectingNumber.pth and file model.py being in the same address. Besides, if you wish to implement a completely new model, you only need delete or move file ModelDetectingNumber.pth away.
+- If you wish to continue to train the model which was already trained by me, you may consider to run the file train.py with file ModelDetectingNumber.pth and file model.py being in the same address. Besides, if you wish to implement a completely new model, you only need delete or move file ModelDetectingNumber.pth away. When file ModelDetectingNumber.pth does not appear, file train.py will automatically implement a new model with architecture of file model.py
 - The dataset used to train model should look something like this:  
 ├── 0/  
 │   ├── img1.png  
@@ -32,7 +32,8 @@ Numerical image classification using Convolutional Neural Network, illustrating 
 ├── 6/  
 ├── 7/  
 ├── 8/  
-└── 9/  
+└── 9/
+- Besides, if you only wish to use the model, you can import model from file model.py with weights loaded from ModelDetectingNumber.pth
 
 ## Limitation
 - Model usually gives right predictions only when the background color of input images is white because this model was trained primarily on numerical images with white backgrounds.
