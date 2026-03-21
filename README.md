@@ -12,8 +12,12 @@ Numerical image classification using Convolutional Neural Network, illustrating 
 - A demonstration of the model is produced at HuggingFace Space: https://huggingface.co/spaces/Fuyuki0312/ModelDetectingNumber-demo
 - You may need to restart the space in order to use the model.
 - Note: Input images are grayscale and their background color should be white by default.
-![description](ModelDemonstration.jpg)
+![description](Images/ModelDemonstration.jpg)
 
+## Metrics
+![description](Images/LossCurve.jpg) ![description](Images/AccuracyCurve.jpg)
+- Model reached approximately 93% accuracy on a custom dataset.
+![description](Images/ConfusionMatrix.jpg)
 
 ## How to use this model
 - If you wish to continue to train the existing model, consider to run the `train.py` with both `ModelDetectingNumber.pth` and `model.py` in the same directory. Hyperparameters in `train.py` can be changed to suit your need. Besides, if you wish to train a completely new model, simply delete or move file `ModelDetectingNumber.pth` away. When `ModelDetectingNumber.pth` is not found, `train.py` will automatically initialize a new model with architecture based on `model.py`.
