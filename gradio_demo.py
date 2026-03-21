@@ -17,8 +17,8 @@ transform = transforms.Compose([
     transforms.Resize((90, 140)),
     transforms.CenterCrop((90, 140)),
     transforms.ToTensor(),
-    transforms.Normalize(mean=(0.286,),
-                         std=(0.353,))
+    transforms.Normalize(mean=(0.5,),
+                         std=(0.5,))
 ])
 
 God_of_Number = Model_detecting_number()
