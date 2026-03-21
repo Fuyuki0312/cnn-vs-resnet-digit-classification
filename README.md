@@ -46,8 +46,9 @@ Numerical image classification using Convolutional Neural Network, illustrating 
 
 ## Limitation
 - Model usually gives right predictions only when the background color of input images is white because this model was trained primarily on numerical images with white backgrounds.
-- If the input image is not so clear, the model may confidently produce a wrong prediction.
+- If the input image is not so clear or handwritting is bad, the model may confidently produce a wrong prediction.
 
 
 ## Possible Improvements
 - Expanding the dataset to include numerical images with diverse backgrounds (dark, textured, etc).
+- Add more numerical images with bad handwritting to dataset.
