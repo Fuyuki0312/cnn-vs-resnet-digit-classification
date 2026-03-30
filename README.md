@@ -24,7 +24,7 @@ Given the limited size of the dataset in this project, CNN is a more suitable an
 
 
 ## Metrics
-- Model reached approximately 93% accuracy on a custom dataset.  
+- Model reached approximately 94% accuracy on a custom dataset.  
 
 ![description](Images/CNNAccuracyCurve.jpg) ![description](Images/CNNLostCurve.jpg)
 ![description](Images/CNNConfusionMatrix.jpg)  
