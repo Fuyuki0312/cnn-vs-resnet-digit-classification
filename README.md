@@ -102,9 +102,11 @@ Note: before following the instruction below, you may want to go to folder `CNN 
 
 ## Limitation
 - The models usually give right predictions only when the background color of input images is white because the models were trained primarily on numerical images with white backgrounds.
-- When the input image is ambiguous or low-quality, the models may confidently produce a wrong prediction.
+- When the input image is ambiguous or low-quality, the models may confidently produce an incorrect prediction.
+- Digits that occupy only a small portion of the image are more likely to be misclassified.
 
 
 ## Possible Improvements
-- Expanding the dataset to include numerical images with diverse backgrounds (dark, textured, etc) might be a solution to enable models to predict images with black background and white digits.
+- Expanding the dataset to include numerical images with diverse backgrounds (dark, textured, etc) might enable models to predict images with black background and white digits.
 - Since some digits have more than one handwritting style, adding more numerical images written in a wider range of styles to the dataset can help models become more familiar with human-like digits.
+- Rescaling data into smaller sizes may help models to recognize digits especially when written digits are very small.
