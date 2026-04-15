@@ -3,7 +3,7 @@ A comparative study of attention-augmented Convolutional Neural Network (CNNtent
 
 
 ## 1. Overview
-- Task: Comparing 4 models: a non-attention CNN model, a CNNtention model, a ResNet18 model from scratch and a pretrained ResNet18 model in handwritten digit classification (from 0 to 9)
+- Task: Comparing 4 models: a non-attention CNN model, a CNNtention model and a ResNet18 model from scratch in handwritten digit classification (from 0 to 9)
 - Model: Convolutional Neural Network (CNN)
 - Mechanism: Spatial Self-Attention (inspired by Transformer)
 
@@ -64,6 +64,8 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 - The model sometimes confuses digits like 0, 3, 6, 8, and 9 due to similar rounded shapes and different handwritting styles.  
 
 ### 5.2. CNNtention
+
+#### 5.2.1. CNNtention on images of 45x90 size
 - The CNNtention model was built based on the non-attention CNN model's architecture but with attention mechanisms, reaching 97.15% test accuracy.  
   
 ![description](Images/CNNtentionAccuracyCurve.jpg) ![description](Images/CNNtentionLossCurve.jpg)
@@ -75,16 +77,10 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 - The model reached 98.99% test accuracy.
 ![description](Images/ScratchResNetAccuracyCurve.jpg) ![description](Images/ScratchResNetLossCurve.jpg)
 ![description](Images/ScratchResNetConfusionMatrix.jpg)
+ 
+- While the ResNet18 model performed effectively on the dataset with reliable metrics, it may not necessarily be consistent to correctly predict real-world handwritten digits. Therefore, these metrics should be interpreted with caution.
 
-### 5.4. Pretrained ResNet18
-- The model reached 99.62% test accuracy.  
-![description](Images/PretrainedResNetAccuracyCurve.jpg) ![description](Images/PretrainedResNetLossCurve.jpg)
-![description](Images/PretrainedResNetConfusionMatrix.jpg)
-
-(The graphs collected metrics each epoch and since the pretrained ResNet18 model was trained on only 3 epochs, the "curves" appear to be quite linear)  
-- While the ResNet18 models performed effectively on the dataset with reliable metrics, it may not necessarily be consistent to correctly predict real-world handwritten digits. Therefore, these metrics should be interpreted with caution.
-
-### 5.5. Comparison
+### 5.4. Comparison
 
 ![description](Images/ComparisonTable.jpg)
 
@@ -99,7 +95,7 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 
 
 ## 6. How to use the models
-Note: before following the instruction below, you may want to go to folder `CNNtention` or `PretrainedResNet18` or others first.
+Note: before following the instruction below, you may want to go to folder `CNNtention` or `ScratchResNet18` or others first.
 
 ### 6.1. Training
 - To continue to train the existing models, consider to run `train.py`. Hyperparameters in those files can be changed to suit your need. Besides, if you want to train a completely new model, simply delete or move `ModelDetectingNumber.pth` away. When `ModelDetectingNumber.pth` is not found, `train.py` will automatically initialize a new model based on `model.py` (and `self_attention.py` for CNNtention).
