@@ -70,7 +70,7 @@ Some heavy transformations (e.g., random rotation, large scaling) were avoided t
 
 #### 5.2.2. CNNtention on images of size 45x90 (resized)
 
-Due to very long training time, I decided to train that CNNtention model again but with images resized to 45x70 from 90x140 and reached 97.15% test accuracy.  
+Due to very long training time (section 5.4), I decided to train that CNNtention model again but with images resized to 45x70 from 90x140 and reached 97.15% test accuracy.  
   
 ![description](Images/CNNtentionAccuracyCurve.jpg) ![description](Images/CNNtentionLossCurve.jpg)
 ![description](Images/CNNtentionConfusionMatrix.jpg)  
